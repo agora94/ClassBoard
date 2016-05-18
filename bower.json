@@ -1,0 +1,17 @@
+{
+  "name": "ClassBoard",
+  "version": "0.0.0",
+  "description": "",
+  "dependencies": {
+    "bootstrap": "latest",
+    "angular": "latest",
+    "angular-resource": "latest",
+    "angular-animate": "latest",
+    "angular-mocks": "latest",
+    "angular-bootstrap": "latest",
+    "angular-ui-utils": "latest",
+    "angular-ui-router": "latest",
+    "angular-socket-io": "~0.7.0",
+    "socket.io-client": "~1.3.5"
+  }
+}

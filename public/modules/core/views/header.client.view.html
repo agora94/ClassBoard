@@ -1,0 +1,78 @@
+
+<nav class="navbar navbar-default" data-ng-controller="HeaderController">
+  <div class="container-fluid">
+		<!---- HEADER ---->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navBarCollapse">
+        <span class="sr-only">Toggle navigation</span>
+	      <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <!---- BRAND NAME ---->
+      <a class="navbar-brand" href="/#/"><strong>ClassBoard</strong></a>
+      <!---- ClASS NAME ---->
+      <span class="navbar-class navbar-text">
+          <h3 class="dropdown">
+            <a id="className" ng-if="Authentication.user.classes.length != 0" href="/#/" class="dropdown-toggle" dropdown-toggle data-toggle="dropdown" role="button" aria-expanded="false">
+              <strong>{{authentication.course.title}}</strong>
+            </a>
+            <dl id="classInfoDropDown" class="dropdown-menu navDropDown dl-horizontal" role="menu">
+              <dt>Teacher</dt>
+              <dd>{{authentication.course.adminName}}</dd>
+              <dt>Students Enrolled</dt>
+              <dd>{{authentication.course.students.length}}</dd>
+              <dt>Class Code</dt>
+              <dd>{{authentication.course.code}}</dd>
+            </dl>
+          </h3>
+        </span>
+      </div>
+
+		<div class="collapse navbar-collapse" id="navBarCollapse">
+
+			<!---- LEFT ALIGNED ELEMENTS ---->
+			<ul class="nav navbar-nav">
+
+				<!-- My Classes -->
+				<li class="dropdown" data-ng-show="!isActive('/signin')">
+          <a href="" class="dropdown-toggle" dropdown-toggle data-toggle="dropdown" role="button" aria-expanded="false" fref="/#/">My Classes <span class="caret"></span></a>
+          	<ul class="dropdown-menu navDropDown" role="menu">
+							<li ng-repeat="classes in authentication.user.classes">
+								<a ng-href="/#/course/{{classes._id}}">{{classes.title}}</a>
+							</li>
+							<li class="no-classes disabled">
+								<a>No classes</a>
+							</li>
+            	<li class="divider"></li>
+	            <li>
+	            	<a href="#/setup">Enroll in new class</a>
+	            </li>
+            </ul>
+        </li>
+			</ul>
+
+        <a class="navbar-text col-md-8" ng-class="{active: $uiRoute}" ng-view="">{{course[0].title}}</a>
+
+
+			<!---- RIGHT ALIGNED ELEMENTS ---->
+			<ul class="nav navbar-nav navbar-right">
+				<!-- User Options -->
+				<li class="dropdown" data-ng-show="!isActive('/signin')">
+					<a href="" class="dropdown-toggle" dropdown-toggle data-toggle="dropdown" href="/#/" role="button" aria-expanded="false"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;&nbsp;&nbsp; {{authentication.user.firstName}} {{authentication.user.lastName}}</a>
+						<ul class="dropdown-menu navDropDown" role="menu">
+							<!-- Settings -->
+							<li ng-class="{active: $uiRoute}" data-ng-show="!isActive('/signin')">
+								<a href="" ng-click="open('md', authentication.user)">Settings</a>
+							</li>
+            	<li class="divider"></li>
+							<!-- LogOut -->
+							<li ng-class="{active: $uiRoute}" data-ng-show="authentication.user">
+								<a href="/#" ng-click="logOut()">Log Out</a>
+							</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>

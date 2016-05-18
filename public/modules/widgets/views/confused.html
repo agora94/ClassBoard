@@ -1,0 +1,27 @@
+<div ng-if="isAdmin()">
+  <div class="mainRow row" align="center">
+    <div class="col-md-1">
+      <h3 style='color: {{getColor()}}; font-size:400%; margin-top: -20px;'><strong>{{confusedCount}}</strong></h3>
+    </div>
+    <div ng-if="confusedCountIsOne()" class="col-md-8">
+      <h3>&nbsp; student confused</h3>
+    </div>
+
+    <div ng-if="!confusedCountIsOne()" class="col-md-8">
+      <h3>&nbsp; students confused</h3>
+    </div>
+
+    <button class="btn btn-sm btn-info col-md-3" ng-click="reset()">Reset Count</button>
+  </div>
+</div>
+
+
+
+<div ng-if="!isAdmin()">
+  <div align="center">
+    <button ng-class="isConfused ? 'btn btn-lg btn-success disabled' : 'btn btn-lg btn-success'" ng-click="addConfused()">
+      I'm Confused
+    </button>
+  </div>
+</div>
+<div ng-if="ConfusedError">error: {{ConfusedError}}</div>

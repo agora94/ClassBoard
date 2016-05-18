@@ -1,0 +1,214 @@
+.black {
+  background-color:black;
+}
+
+.card {
+  width: 100%;
+  position: relative;
+  display: inline-block;
+  padding: 15px;
+  background-color: white;
+  border-radius: 3px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+  margin: 0 0 15px 0;
+}
+.card .row {
+  width: 100%;
+}
+.card > .row {
+  height: 32px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.17);
+  margin: 0 0 10px 0;
+}
+.card h3 {
+  font-size: 22px;
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+.card div {
+  display: block;
+}
+.card h5 {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.card textarea {
+  width: 100%!important;
+  resize: none;
+}
+.card .input-group {
+  width: 100%;
+}
+.card .btn-group {
+  width: 100%;
+}
+.card label {
+  width: 100%;
+}
+.card .small-scroll {
+  max-height: 30vh;
+  overflow: auto;
+}
+/**Animation Stuff **/
+.animated {
+  -webkit-animation-duration: 0.75s;
+  animation-duration: 0.75s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+@-webkit-keyframes bounceIn {
+  0% {
+    display:none;
+    opacity: 0;
+    -webkit-transform: scale(.3);
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(1.05);
+  }
+  70% {
+    -webkit-transform: scale(.9);
+  }
+  100% {
+    -webkit-transform: scale(1);
+  }
+}
+@keyframes bounceIn {
+  0% {
+    display:none;
+    opacity: 0;
+    transform: scale(.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.bounceIn {
+  -webkit-animation-name: bounceIn;
+  animation-name: bounceIn;
+}
+.bounceIn.one {
+  -webkit-animation-delay: 0.1s;
+  -moz-animation-delay: 0.1s;
+  animation-delay: 0.1s;
+}
+.bounceIn.two {
+  -webkit-animation-delay: 0.3s;
+  -moz-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+}
+.bounceIn.three {
+  -webkit-animation-delay: 0.5s;
+  -moz-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+.bounceIn.four {
+  -webkit-animation-delay: 0.7s;
+  -moz-animation-delay: 0.7s;
+  animation-delay: 0.7s;
+}
+.bounceOut {
+  display:none;
+	-webkit-transition: display .75s; /* Safari */
+	transition: display .75s;
+}
+
+.widg{
+  padding-left:7.5px !important;
+  padding-right:7.5px !important;
+}
+
+.widgDefault{
+	color:black;
+	background-color:white;
+	-webkit-transition: all 1s; /* Safari */
+	transition: all 1s;
+  outline:0;
+}
+.widgSettings{
+	color:white;
+	background-color:#9954bb;
+	-webkit-transition: all 1s; /* Safari */
+	transition: all 1s;
+  outline:0;
+}
+
+.widgetBtnCog{
+  color:#9954bb;
+  background-color:#ffffff;
+  border-color:#ffffff;
+	-webkit-transition: all 1s; /* Safari */
+	transition: all 1s;
+}
+.widgetBtnOk{
+  color:#ffffff;
+  background-color:#9954bb;
+  border-color:#9954bb;
+	-webkit-transition: all 1s; /* Safari */
+	transition: all 1s;
+}
+.widgetBtnCog:hover{
+  color:#9954bb;
+  background-color:#ffffff;
+  border-color:#ffffff;
+	-webkit-transition: all 1s; /* Safari */
+	transition: all 1s;
+}
+.widgetBtnCog:focus{
+  color:#9954bb;
+  background-color:#ffffff;
+  border-color:#ffffff;
+  outline:0;
+	-webkit-transition: all 1s; /* Safari */
+	transition: all 1s;
+}
+.widgetBtnOk:focus{
+  color:#ffffff;
+  background-color:#9954bb;
+  border-color:#9954bb;
+  outline:0;
+	-webkit-transition: all 1s; /* Safari */
+	transition: all 1s;
+}
+#wolframIframe{
+  display:block;
+  width: 210px;
+  height: 86px;
+  margin: 0 auto;
+}
+#questionRow{
+  margin-left:0;
+  max-height:325px;
+  overflow-y:scroll;
+
+}
+#activeQuestionRow{
+  margin-left:0;
+}
+.customXs{
+  margin-bottom:3px;
+  padding: 3px 7px;
+}
+
+#questionAnswerDropDown > a{
+	color:black !important;
+}
+#questionAnswerDropDown:hover > a{
+	color:black;
+	background-color:#2780e3;
+}
+
+.newQuestionInput{
+	padding-left:15px;
+	padding-right:15px;
+}
